@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Minimum Operations"""
+""" Minimum Operations """
 
 
 def minOperations(n: int) -> int:
     """ Minimum Operations needed to get n H characters """
     next = 'H'
-    boody = 'H'
+    body = 'H'
     op = 0
     while (len(body) < n):
         if n % len(body) == 0:
