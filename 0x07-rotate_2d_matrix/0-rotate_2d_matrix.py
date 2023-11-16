@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Rotates in-place"""
+"""Rotates 2-D matrix:"""
 
 
 def rotate_2d_matrix(m):
@@ -11,7 +11,7 @@ def rotate_2d_matrix(m):
         for i in range(j, n - 1):
             # For r in first row, put in same position in col from back
             temp1 = m[i][n - 1]
-            m[1][n - 1] = m[j][i]
+            m[i][n - 1] = m[j][i]
             # put that temp1 in reverse position in row from bottom
             temp2 = m[n - 1][n - 1 - i + j]
             m[n - 1][n - 1 - i + j] = temp1
@@ -20,4 +20,4 @@ def rotate_2d_matrix(m):
             m[n - 1 - i + j][j] = temp2
             # put that temp1 in reverse position in row from top
             m[j][i] = temp1
-            n -= 1
+        n -= 1
